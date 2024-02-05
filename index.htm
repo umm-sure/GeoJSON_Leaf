@@ -50,6 +50,7 @@ fetch('map.geojson')
 			onEachFeature: function (feature, layer) {
 				if (feature.properties && feature.properties.City) {
 					layer.bindPopup(feature.properties.City);
+					layer.bindPopup(feature.properties.Pop_2015);
 				}
 			}
 		}).addTo(map);
